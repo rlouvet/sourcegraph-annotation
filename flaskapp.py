@@ -55,7 +55,7 @@ def getName(name):
     else:
         gen = (('name', name), ('url', data[name]))
         newDict = OrderedDict(gen)
-        outBuffer = json.dumps(newDict)
+        outBuffer = json.dumps(newDict) + '\n'
         return outBuffer
 
 @app.route('/names/<name>', methods = ['PUT'])
